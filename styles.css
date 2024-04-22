@@ -1,0 +1,442 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Google font 'poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Example media query for adjusting styles for small screens */
+@media only screen and (max-width: 600px) {
+    /* CSS rules for small screens */
+}
+
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 95%; /* Further adjust width for mobile devices */
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    background-color: darkslategray;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_side {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    opacity: .7;
+    box-shadow: 5px 0px 2px black;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+.menu_side h1 {
+	font-size: 30px;
+	margin: 30px 0px 0px 120px;
+	font-weight: 500;
+	color: white;
+}
+.menu_side h2 {
+	font-size: 30px;
+	margin: 100px 0px 0px 150px;
+	font-weight: 500;
+	color: white;
+	cursor: pointer;
+}
+.menu_side p {
+	font-size: 11px;
+	margin: 0px 0px 0px -20px;
+	font-weight: 15;
+	color: white;
+	padding-bottom: 30px;
+	
+}
+
+.menu_side .playlist{
+	margin: 60px 0px 0px 30px;
+	
+}
+
+.menu_side .playlist h4{
+	font-size:14px;
+	font-weight: 400;
+	padding-bottom: 0px;
+	color: orange;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: 0.3s linear;
+}
+.menu_side .playlist h4:hover {
+	color:white;
+}
+
+.menu_side .playlist h4 span{
+	position: relative;
+	margin-right: 35px;
+}
+.menu_side .playlist h4 span:before {
+	content: ' ';
+	position: absolute;
+	width:4px;
+	height:4px;
+	border:2px solid yellow;
+	border-radius: 50%;
+	top: -4px;
+	transition: 0.3s linear;
+}
+.menu_side .playlist h4:hover span:before{
+	border:2px solid white;
+}
+.menu_side .playlist h4 .bi{
+	display: none;
+}
+.menu_side .playlist .active{
+	color:aqua;
+}
+.menu_side .playlist .active span{
+	display:none;
+}
+.menu_side .playlist .active .bi{
+	display: flex;
+	margin-right: 20px;
+}
+.master_play {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black; /* Adjust as needed */
+	opacity: 1;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for visual appeal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+ .master_play .wave{
+	width: 30px;
+	height: 30px;
+	/*border: 1px solid black;*/
+	padding-bottom: 5px;
+	display:flex;
+	align-items: flex-end;
+	margin-right: 30px;
+	 background-color: black;
+}
+ .master_play .wave .wave1{
+	width: 3px;
+	height: 10px;
+	margin-right: 3px;
+	border-radius: 10px 10px 0px 0px;
+	background: aqua;
+	animation: wave .5s linear infinite;
+}
+ .master_play .wave .wave1:nth-child(2){
+	height: 13px;
+	animation-delay: .4s;
+}
+ .master_play .wave .wave1:nth-child(3){
+	height: 8px;
+	animation-delay: .8s;
+}
+
+ .master_play .active2 .wave1{
+	
+	animation: wave .5s linear infinite;
+}
+ .master_play .active2 .wave1:nth-child(2){
+
+	animation-delay: .4s;
+}
+.master_play .active2 .wave1:nth-child(3){
+
+	animation-delay: .8s;
+}
+
+@keyframes wave{
+	0%{
+		height:10px;
+	}
+	50%{
+		height:15px;
+	}
+	100%{
+		height:10px;
+	}
+}
+.master_play button{
+	font-size: 20px;
+	color: black;
+	margin: 0px 20px 0px 40px;
+	border:1px solid black;
+	cursor: pointer;
+	
+}
+.audio-controls{
+	width: 100vw;
+	cursor: pointer;
+}
+#playPauseButton{
+	background-color: black;
+}
+#progressBar{
+	width:50vw;
+}
+#volumeSlider{
+	margin-left: 20vw;
+	cursor: pointer;
+}
+
+.song_side {
+    position: absolute; /* Fixed position to make it appear at the top */
+    top: 0; /* Align to the top of the viewport */
+	right: 0;
+}
+
+.song_side nav {
+    width: 100vw;
+    display: flex;
+	padding-top: 25px;
+	/*box-shadow: 0px 5px 0px black;*/
+	
+}
+
+.song_side nav ul {
+    display: flex;
+    padding: 0; /* Remove default padding */
+	margin-left: 30vw;
+}
+
+.song_side nav ul li {
+    position: relative;
+    list-style-type: none;
+    font-size: 13px;
+    color: white;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.song_side nav ul li:hover {
+    color: black;
+}
+
+.song_side nav ul li:nth-child(1) {
+    color: white;
+}
+
+.song_side nav ul li span {
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background: aqua;
+    bottom: -5px;
+    left: 0;
+    border-radius: 20px;
+}
+
+.song_side nav .search {
+    position: relative;
+    width: 15vw;
+	height: 3vh;
+    padding: 1px 10px;
+	margin-right: 400px;
+    border-radius: 20px;
+    color: gray;
+}
+
+.song_side nav .search::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color:darkslategray;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.song_side nav .search .bi {
+    font-size: 13px;
+    padding: 3px 0px 0px 10px;
+	color:white;
+}
+
+.song_side nav .search input {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    color: black;
+    font-size: 12px;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 12%; /* Adjust as needed */
+  height: 100%; /* Make the sidebar take up the full height of the viewport */
+  background-color:darkslategray;
+font-weight: 3;
+  padding: 10px;
+  overflow-y: auto; /* Add scrollbar if content exceeds sidebar height */
+  z-index:2; /* Ensure the sidebar appears on top of other content */
+	opacity: .5;
+	box-shadow: 0px 0px 10px black;
+}
+#sidebar h2 {
+  color:white;
+	opacity: 1;
+	margin-left: 50px;
+	padding-top:10px;
+	padding-bottom: 30px;
+}
+
+#recentlyPlayedList {
+  list-style-type:none;
+  padding:0;
+}
+
+#recentlyPlayedList li {
+  margin-bottom: 5px;
+  cursor: pointer;
+	color:white;
+}
+
+#recentlyPlayedList li:hover {
+  color: black;
+}
+/* Style for the playlist boxes */
+.genre-container {
+  display: grid;
+  /* border: 1px solid black; */
+  width: 50vw;
+  height: 50vh;
+  margin-left: 15vw;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+
+/* Style for the genre boxes */
+.genre-box {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 25px;
+	width:250px;
+	height:250px;
+}
+
+.genre-box h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+#sero{
+	background-color: cadetblue;
+	opacity: 0.5;
+	box-shadow: 0px 0px 10px black;
+}
+#dopa{
+	background-color: lightpink;
+	opacity: 0.5;
+	box-shadow: 0px 0px 10px black;
+}
+#oxy{
+	background-color: aqua;
+		opacity: 0.5;
+	box-shadow: 0px 0px 10px black;
+}
+#pine{
+	background-color: mediumspringgreen;
+	opacity: 0.5;
+	box-shadow: 0px 0px 10px black;
+}
+#endo{
+	background-color: coral;
+	opacity: 0.5;
+	box-shadow: 0px 0px 10px black;
+		
+}
+.genre-box img{
+	border-radius: 20px;
+	padding: 10px;
+	opacity: 1;
+	cursor: pointer;
+}
+.song_side .popular_song .pop_song li .img_play .bi{
+	position: absolute;
+	font-size: 20px;
+	cursor: pointer;
+	transition: .3s linear;
+	opacity: 0;
+}
+.genre-container .genre-box .bi{
+	display:flex;
+	position: absolute;
+	color:white;
+	cursor: pointer;
+	transition: .3s linear;
+	
+	
+}
+.genre-container .genre-box .bi:hover{
+	color:black;
+}
+.genre-box {
+    position: relative;
+}
+
+.play-button-container {
+    position: absolute;
+    top: 55%;
+    left:45%;
+    transform: translate(-50%, -50%);
+	
+}
+
+
+.menu_side.collapsed {
+    /* Move the menu off-screen when collapsed */
+    transform: translateX(-100%);
+	transition: transform 0.7s ease;
+}
+#toggleMenuButton{
+	position: absolute;
+	color:white;
+	background-color: darkslategray;
+	box-decoration-break: none;
+	width: 2vw;
+	height:3vh;
+	margin-left: 25.3vw;
+	border: none;
+	
+}
+

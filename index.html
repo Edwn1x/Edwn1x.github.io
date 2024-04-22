@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Mentality</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+	
+<div class="audiosources">
+    <audio id="Serotonin Symphony">
+        <source src="./audio/seratonin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Dopamine Drive">
+        <source src="./audio/dopamine.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Oxytocin Oasis">
+        <source src="./audio/oxytocin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Epinephrine Express">
+        <source src="./audio/epinephrine.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Endorphin Escape">
+        <source src="./audio/endorphin.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+	
+<body>
+	<div class="song_side">
+		<nav>
+			<ul>
+				<li>Discover<span></span></li>
+				<li>MY LIBRARY </li>
+				<li>RADIO</li>
+			</ul>
+			<div class="search">
+				<i class="bi bi-search"></i>
+				<input type="text" placeholder="Search Music...">
+			</div>
+		</nav>
+	</div>
+	
+	 <div class="wrapper">
+	<div class="menu_side">
+		<button id="toggleMenuButton">&#9776;</button>
+		<h1>Playlists </h1>
+		<div class="playlist"> 
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Serotonin Symphony</h4>
+			<p> Dive into a melodic journey that uplifts your mood and brightens your day. Serotonin, often referred to as the "happiness hormone," plays a crucial role in regulating mood and promoting feelings of well-being. Let the harmonious tunes in this playlist stimulate your serotonin levels and evoke a sense of joy and contentment. </p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Dopamine Drive</h4>
+			<p>Get ready for an exhilarating ride fueled by pulsating beats and infectious rhythms. Dopamine, known as the "reward molecule," is associated with pleasure and motivation. As you groove to the music in this playlist, feel your dopamine levels surge, igniting a sense of excitement and anticipation. Let the music drive you to new heights of euphoria and enjoyment. </p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Oxytocin Oasis </h4>
+			<p> Immerse yourself in a tranquil oasis of soothing melodies and heartfelt lyrics. Oxytocin, often called the "love hormone," is linked to feelings of trust, connection, and relaxation. Allow the tender tunes in this playlist to envelop you in a warm embrace, fostering a sense of intimacy and closeness. Let the music create a sanctuary where you can unwind and feel a deep sense of belonging. </p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Epinephrine Express</h4>
+			<p> Embark on a high-energy adventure fueled by adrenaline-pumping tracks and electrifying beats. Epinephrine, also known as adrenaline, is responsible for the body's fight-or-flight response, inducing feelings of excitement and alertness. Feel the rush of adrenaline as you surrender to the electrifying music in this playlist, propelling you into a state of heightened awareness and exhilaration.</p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Endorphin Escape</h4>
+			<p>Escape into a euphoric realm of uplifting melodies and euphoric rhythms. Endorphins, the body's natural painkillers, are released during exercise and moments of joy, producing feelings of euphoria and well-being. Surrender to the euphoric sounds in this playlist, and let the music uplift your spirits and elevate your mood. Allow yourself to experience a blissful escape from the stresses of everyday life. </p>
+		
+		</div>
+	</div>
+	
+	<div class="master_play">
+		<div class="wave">
+			<div class="wave1"></div>
+			<div class="wave1"></div>
+			<div class="wave1"></div>
+		</div>
+		
+<div class="audio-controls">
+    <button id="playPauseButton"><i class="bi bi-play-fill"></i></button>
+    <progress id="progressBar" value="0" max="100"></progress>
+	<input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1"> <i class="bi bi-volume-up-fill"></i>
+</div>
+
+	</div>
+	
+	<div id="sidebar">
+		
+		<div id="recentlyPlayedSection">
+		<h2>Recently Played</h2>
+		<ul id="recentlyPlayedList">
+			
+		</ul>
+		</div>
+	</div>
+
+	<section id="genres">
+		<div class="genre-container">
+			<h2>Explore the Different Playlists</h2>
+			
+			<div class="genre-box" id="sero">
+				<h3>Serotonin Symphony</h3>
+				
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="1" width="50" height="50"></i>
+				</div>
+				
+				<img src="./images/sun.png" width="220" height="220" alt="" id="image"/>
+			</div>
+			
+			<div class="genre-box" id="dopa">
+				<h3>Dopamine Drive</h3>
+				
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="2" width="50" height="50"></i>
+				</div>
+				
+				<img src="./images/drive.jpg" width="220" height="220" alt="" id="image2"/>
+				
+			</div>
+			
+			<div class="genre-box" id="oxy">
+				<h3>Oxytocin Oasis</h3>
+				
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="3" width="50" height="50"></i>
+				</div>
+				
+				<img src="./images/moon.jpg" width="220" height="220" alt="" id="image3"/>
+			</div>
+			
+			<div class="genre-box" id="pine">
+				<h3>Epinephrine Express</h3>
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="4" width="50" height="50"></i>
+				</div>
+				<img src="./images/car.jpg" width="220" height="220" alt="" id="image4"/>
+			</div>
+			
+			<div class="genre-box" id="endo">
+				<h3>Endorphin Escape</h3>
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="5" width="50" height="50"></i>
+				</div>
+				<img src="./images/sky.jpg" width="220" height="220" alt="" id="image5"/>	 
+			</div>
+		</div>
+	</section>
+	</div>
+</body>
+</html>
