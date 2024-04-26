@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Library</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+	
+<div class="audiosources">
+    <audio id="Fuentes De Ortiz">
+        <source src="./audio/seratonin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Cha Cha Cha">
+        <source src="./audio/dopamine.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Que Diablos Hice">
+        <source src="./audio/oxytocin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Star Shopping">
+        <source src="./audio/epinephrine.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Tu Si Eres Real">
+        <source src="./audio/endorphin.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+	
+<body>
+	<div class="song_side">
+		<nav>
+			<ul>
+				<li><a href="index.html">Discover</a></li>
+				<li>MY LIBRARY <span></span></li>
+			</ul>
+			<div class="search">
+				<i class="bi bi-search"></i>
+				<input type="text" placeholder="Search Music...">
+			</div>
+		</nav>
+	</div>
+	
+	 <div class="wrapper">
+	<div class="menu_side">
+		<button id="toggleMenuButton">&#9776;</button>
+		<h1>How-to-Play</h1>
+		<div class="playlist"> 
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Fuentes De Ortiz</h4>
+			<p> <strong>Guitar Chords:</strong> Fmaj7, G, C, Am. <strong>Capo:</strong>1st Fret <strong>Tuning:</strong> Standard <strong>Strumming Pattern: </strong> &darr;&darr;	&uarr;&uarr; &darr;&uarr;</p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Cha Cha Cha</h4>
+			<p><strong>Guitar Chords:</strong> C, Am, Em, E, F, G, <strong>Capo:</strong>5th Fret <strong>Tuning:</strong>Standard <strong>Strumming Pattern: </strong> &darr;&uarr; &#8643;&uarr; &darr;&uarr; &#8643;&uarr;</p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Que Diablos Hice </h4>
+			<p><strong>Guitar Chords:</strong> C, Am, Em, G7 <strong>Capo:</strong>6th Fret <strong>Tuning:</strong> Standard <strong>Strumming Pattern: </strong> &uarr;&darr; &uarr;&#8643; </p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Star Shopping</h4>
+			<p> <strong>Guitar Tabs: </strong>E-3, D-4, A-2 || A-0, D-4 <strong>Capo:</strong> none <strong>Tuning: </strong>Standard <strong>Key: </strong>G <strong>  Picking Pattern: </strong> &darr;&uarr;</p>
+			<h4 class="active"> <span></span><i class="bi bi-music-note-beamed"></i> Tu Si Eres Real</h4>
+			<p> <strong>Guitar Chords:</strong>Em, G, Am <strong>Capo:</strong>None <strong>Tuning:</strong>Standard <strong>Strumming Pattern: </strong> Pick String E &darr; , Pick String A &darr;</p>
+		
+		</div>
+	</div>
+	
+	<div class="master_play">
+		<div class="wave">
+			<div class="wave1"></div>
+			<div class="wave1"></div>
+			<div class="wave1"></div>
+		</div>
+		
+<div class="audio-controls">
+    <button id="playPauseButton"><i class="bi bi-play-fill"></i></button>
+    <progress id="progressBar" value="0" max="100"></progress>
+	<input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1"> <i class="bi bi-volume-up-fill"></i>
+</div>
+
+	</div>
+	
+	<div id="sidebar">
+		
+		<div id="recentlyPlayedSection">
+		<h2>Recently Played</h2>
+		<ul id="recentlyPlayedList">
+			
+		</ul>
+		</div>
+	</div>
+
+	<section id="genres">
+		<div class="genre-container">
+			<h2>Explore the Different Guitar Beats</h2>
+			
+			<div class="genre-box" id="sero">
+				<h3>Fuentes De Ortiz</h3>
+				
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="1" width="50" height="50"></i>
+				</div>
+				
+				<img src="./images/ortiz.jpeg" width="220" height="220" alt="" id="image"/>
+			</div>
+			
+			<div class="genre-box" id="dopa">
+				<h3>Cha Cha Cha</h3>
+				
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="2" width="50" height="50"></i>
+				</div>
+				
+				<img src="./images/cha.jpeg" width="220" height="220" alt="" id="image2"/>
+				
+			</div>
+			
+			<div class="genre-box" id="oxy">
+				<h3>Que Diablos Hice</h3>
+				
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="3" width="50" height="50"></i>
+				</div>
+				
+				<img src="./images/que.png" width="220" height="220" alt="" id="image3"/>
+			</div>
+			
+			<div class="genre-box" id="pine">
+				<h3>Star Shopping</h3>
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="4" width="50" height="50"></i>
+				</div>
+				<img src="./images/star.jpeg" width="220" height="220" alt="" id="image4"/>
+			</div>
+			
+			<div class="genre-box" id="endo">
+				<h3>Tu Si Eres Real</h3>
+				<div class="play-button-container">
+					<i class="bi playlistPlay bi-play-circle-fill" id="5" width="50" height="50"></i>
+				</div>
+				<img src="./images/real.jpeg" width="220" height="220" alt="" id="image5"/>	 
+			</div>
+		</div>
+	</section>
+	</div>
+</body>
+</html>
