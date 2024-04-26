@@ -45,7 +45,7 @@ body {
 }
 
 .menu_side {
-    position: fixed;
+    position:fixed;
     width: 25%;
     height: 100%;
     background-color: black;
@@ -57,9 +57,10 @@ body {
 }
 .menu_side h1 {
 	font-size: 30px;
-	margin: 30px 0px 0px 120px;
+	margin: 30px 0px 0px 12px;
 	font-weight: 500;
 	color: white;
+	text-align: center;
 }
 .menu_side h2 {
 	font-size: 30px;
@@ -69,7 +70,7 @@ body {
 	cursor: pointer;
 }
 .menu_side p {
-	font-size: 11px;
+	font-size: 13px;
 	margin: 0px 0px 0px -20px;
 	font-weight: 15;
 	color: white;
@@ -219,6 +220,9 @@ body {
     top: 0; /* Align to the top of the viewport */
 	right: 0;
 }
+.song_side a{
+	text-decoration: none;
+}
 
 .song_side nav {
     width: 100vw;
@@ -232,7 +236,7 @@ body {
     display: flex;
     padding: 0; /* Remove default padding */
 	margin-left: 30vw;
-	text-decoration:none;
+	text-decoration: none;
 }
 
 .song_side nav ul li {
