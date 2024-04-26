@@ -232,6 +232,7 @@ body {
     display: flex;
     padding: 0; /* Remove default padding */
 	margin-left: 30vw;
+	text-decoration:none;
 }
 
 .song_side nav ul li {
