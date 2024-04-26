@@ -219,6 +219,7 @@ body {
     position: absolute; /* Fixed position to make it appear at the top */
     top: 0; /* Align to the top of the viewport */
 	right: 0;
+	text-decoration: none;
 }
 .song_side a{
 	text-decoration: none;
